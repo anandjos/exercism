@@ -1,8 +1,3 @@
-//
-// This is only a SKELETON file for the 'Armstrong Numbers' exercise. It's been provided as a
-// convenience to get you started writing code faster.
-//
-
 export const isArmstrongNumber = (num) => {
 var n=num,sum=0;
 var d=num.toString().length;
