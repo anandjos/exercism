@@ -5,7 +5,7 @@ while(n>0)
 {
   var dig=n%10;
   sum=sum+Math.pow(dig,d);
-  n=n/10;
+  n=Math.floor(n/10);
 }
 return sum==num
 };
