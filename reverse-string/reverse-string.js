@@ -4,3 +4,6 @@ export const reverseString = (str) => {
     rev=rev.concat(str[i]);
   return rev;  
 };
+/*export const reverseString = (str) => {
+  return str.split('').reverse().join('');
+};*/
