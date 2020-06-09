@@ -1,12 +1,9 @@
 export class QueenAttack {
     constructor(queen = { white:[0,3], black:[7,3] }) {
-      if(queen!= null)
-      {
-        if(queen.white.toString() == queen.black.toString())
-          throw new Error("Queens cannot share the same space");
-        this.white = queen.white;
-        this.black = queen.black;
-      }
+      if(queen.white.toString() == queen.black.toString())
+        throw new Error("Queens cannot share the same space");
+      this.white = queen.white;
+      this.black = queen.black;
     }
 
     toString() {
@@ -23,8 +20,8 @@ export class QueenAttack {
           else 
             str=str.concat('_ ');
         }
-        str=str.trimEnd();
-        str=str.concat('\n');
+        str = str.trimEnd();
+        str = str + '\n';
       } 
       return str;
     }
