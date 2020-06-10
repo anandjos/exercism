@@ -1,27 +1,19 @@
-const Day = {
-  0:'Sunday',1:'Monday',2:'Tuesday',3:'Wednesday',4:'Thursday',5:'Friday',6:'Saturday'
-}
-
-const find_day_val = day => {
-  for(let i=0; i<7; i++)
-  {
-    if(Day[i] == day)
-      return i;
-  }
-}
+const Day = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
 
 export const meetup = (year,month,descriptor,day) =>  {
   let date = 1;
   switch(descriptor)
   {
-    case 'first':break;
-    case 'second':date = 8;break;
-    case 'third':date = 15;break;
-    case 'fourth':date = 22;break;
-    case 'teenth':date = 13;break;
-    case 'last':date = 22;break;
+    case 'first' : break;
+    case 'second': date = 8;  break;
+    case 'third' : date = 15; break;
+    case 'fourth': date = 22; break;
+    case 'teenth': date = 13; break;
+    case 'last'  : date = 22; break;
+  /*22 is the minimum value possible for the
+   * last occurance of a day in a month */
   }
-  let day_val = find_day_val(day);
+  let day_val = Day.indexOf(day);
   let new_date = new Date(year,month-1,date);
   while(new_date.getDay() != day_val)
   {
