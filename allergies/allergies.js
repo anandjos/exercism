@@ -1,8 +1,7 @@
 const allergens = ['eggs','peanuts','shellfish','strawberries','tomatoes','chocolate','pollen','cats'];
 export class Allergies {
   constructor(num) {
-    this.num = num%256;
-    this.score = (this.num%256).toString(2).split('').reverse();
+    this.score = (num%256).toString(2).split('').reverse();
     this.allergic_items = [];
     for(let i = 0; i<this.score.length; i++)
       if(this.score[i] == 1)
