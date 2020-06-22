@@ -32,3 +32,6 @@ My solutions for the tracks in [exercism.io](https://exercism.io)
 - [x] scrabble-score 
 - [x] allergies 
 - [x] prime-factors 
+- [x] pangram
+- [x] difference-of-squares
+- [x] perfect-numbers
