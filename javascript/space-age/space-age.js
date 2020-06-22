@@ -11,5 +11,5 @@ const orbital_period = {
 export const age = (planet,age_in_seconds) => {
   let earth_year_in_sec = 31557600;
   let age_in_years = age_in_seconds/(orbital_period[planet]*earth_year_in_sec);
-  return Math.round(age_in_years*100)/100;
+  return Number(age_in_years.toFixed(2));
 };
