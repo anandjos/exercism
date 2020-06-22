@@ -39,10 +39,7 @@ export class ComplexNumber {
   }
 
   get conj() {
-    let imag = -this.imag;
-    if(this.imag == 0)
-      imag = 0;
-    return new ComplexNumber(this.real,imag);
+    return new ComplexNumber(this.real,0-this.imag);
   }
 
   get exp() {
