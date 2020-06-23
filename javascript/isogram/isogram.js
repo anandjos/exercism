@@ -8,7 +8,5 @@ export const isIsogram = (phrase) => {
       characters[`${ch.toLowerCase()}`] = 1;
     }
   });
-  for(let prop in characters)
-    total_letters--;  
-  return total_letters == 0;
+  return total_letters == Object.keys(characters).length;
 };
