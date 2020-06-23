@@ -34,9 +34,9 @@ export class Palindromes {
   }
   get largest() {
     let largest = {value:null,factors:[]};
-    for(let i = this.min; i<=this.max ;i++)
+    for(let i = this.max; i>=this.min ;i--)
     {
-      for(let j = i ; j<=this.max ; j++)
+      for(let j = i ; j>=this.min ; j--)
       {
         let num = i*j;
         if(largest.value == null || num >= largest.value)
