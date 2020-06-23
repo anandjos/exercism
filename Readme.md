@@ -38,3 +38,5 @@ My solutions for the tracks in [exercism.io](https://exercism.io)
 - [x] complex-numbers
 - [x] luhn
 - [x] grains
+- [x] palindrome-products 
+- [x] isogram
