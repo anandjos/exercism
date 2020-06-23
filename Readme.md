@@ -35,3 +35,6 @@ My solutions for the tracks in [exercism.io](https://exercism.io)
 - [x] pangram
 - [x] difference-of-squares
 - [x] perfect-numbers
+- [x] complex-numbers
+- [x] luhn
+- [x] grains
