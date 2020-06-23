@@ -1,13 +1,11 @@
 export const valid = (number_string) => {
-  let num_array = number_string.split('');
+  let num_array = number_string.split(' ').join('').split('');
   if(num_array.length<2)
     return false;    
   let skip = 0,digit;
   let sum = 0;
   for(let i = num_array.length-1; i>=0; i--)
   {
-    if(num_array[i] == ' ')
-      i--;
     if(isNaN(Number(num_array[i])))
       return false;
     else 
