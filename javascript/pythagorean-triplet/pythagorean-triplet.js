@@ -16,25 +16,20 @@ export class Triplet {
   isPythagorean() {
     return this.a**2 + this.b**2 == this.c**2;
   }
-  static where(conditions) {
+
+  static where({maxFactor,minFactor = 3,sum}) {
     let triplets = []; 
-    let min = 3,max = 3,sum;
-    if(conditions.hasOwnProperty('minFactor'))
-      min = conditions.minFactor;
-    if(conditions.hasOwnProperty('sum'))
-      sum = conditions.sum;
-    for(let i = min; i<= conditions.maxFactor; i++)
+    for(let i = minFactor; i<= maxFactor; i++)
     {
-      for(let j = i+1; j<= conditions.maxFactor; j++)
+      for(let j = i+1; j<= maxFactor; j++)
       {
-        for(let  k = j+1; k<=conditions.maxFactor; k++)
+        for(let  k = j+1; k<= maxFactor; k++)
         {
-          let triplet = new Triplet(i,j,k);
           if(sum != undefined)
-            if(triplet.sum() != sum)
+            if(i+j+k != sum)
               continue;
-          if(triplet.isPythagorean())
-            triplets.push(triplet);
+          if(i**2 + j**2 == k**2)
+            triplets.push(new Triplet(i,j,k));
         }
       }
     }
