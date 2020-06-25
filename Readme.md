@@ -40,3 +40,4 @@ My solutions for the tracks in [exercism.io](https://exercism.io)
 - [x] grains
 - [x] palindrome-products 
 - [x] isogram
+- [x] pythagorean-triplet 
