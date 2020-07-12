@@ -43,3 +43,6 @@ My solutions for the tracks in [exercism.io](https://exercism.io)
 - [x] pythagorean-triplet 
 - [x] word-count 
 - [x] matrix 
+- [x] high-scores
+- [x] series
+- [x] largest-series-product
