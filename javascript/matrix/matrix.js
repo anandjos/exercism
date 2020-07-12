@@ -1,21 +1,9 @@
 export class Matrix {
   constructor(matrix) {
-    this.row = [];
-    this.column = [];
-    let rows = matrix.split('\n');
-    let r = rows.length,c = rows[0].split(' ').length;
-    let i = 0;
-    for(i =0; i<r; i++)
-      this.row.push(rows[i].split(' ').map(element => Number(element)));
-    for(i =0; i<c; i++)
-      {
-        let row = [];
-        for(let j =0; j<r; j++)
-        {
-          row.push(this.row[j][i]);
-        }
-        this.column.push(row);
-      }
+    const rows = matrix.split('\n');
+    const r = rows.length,c = rows[0].length;
+    this.row = Array.from({ length: r}).map((_,index) => rows[index].split(' ').map(element => Number(element)) );
+    this.column = Array.from({ length: c}).map((_,index) => Array.from({ length: r}).map((_,ind) => this.row[ind][index]));
   }
 
   get rows() {
