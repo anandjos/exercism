@@ -46,3 +46,5 @@ My solutions for the tracks in [exercism.io](https://exercism.io)
 - [x] high-scores
 - [x] series
 - [x] largest-series-product
+- [x] acronym 
+- [x] anagram
