@@ -1,27 +1,26 @@
 export const clean = (phonenumber) => {
-  let phone_number_cleaned = phonenumber.split(/\D/).join('');
-  let len = phone_number_cleaned.length;
-  if(len < 11 && phonenumber.match(/[:@!]/) != null)
-    throw new Error("Punctuations not permitted");
+  let phonenumber_cleaned = phonenumber.split(/\D/).join('');
   if(phonenumber.match(/[a-zA-Z]/) != null)
     throw new Error("Letters not permitted");
-  if(len > 11)
+  if(phonenumber.match(/[^0-9-+() \.]/) != null)
+    throw new Error("Punctuations not permitted");
+  if(phonenumber_cleaned.length > 11)
     throw new Error("More than 11 digits");
-  if(len < 10)
+  if(phonenumber_cleaned.length < 10)
     throw new Error("Incorrect number of digits");
-  if(len == 11)
+  if(phonenumber_cleaned.length == 11)
   {
-    if(phone_number_cleaned.match(/^\+?1/) == null)
+    if(!phonenumber_cleaned.match(/^\+?1/))
       throw new Error("11 digits must start with 1");
-    phone_number_cleaned = phone_number_cleaned.slice(1,11);
+    phonenumber_cleaned = phonenumber_cleaned.slice(1);
   }
-  if(phone_number_cleaned.match(/^0/) != null)
+  if(phonenumber_cleaned[0] == 0)
     throw new Error("Area code cannot start with zero");
-  if(phone_number_cleaned.match(/^1/) != null)
+  if(phonenumber_cleaned[0] == 1)
     throw new Error("Area code cannot start with one");
-  if(phone_number_cleaned.match(/^\d{3}0/) != null)
+  if(phonenumber_cleaned[3] == 0)
     throw new Error("Exchange code cannot start with zero");
-  if(phone_number_cleaned.match(/^\d{3}1/) != null)
+  if(phonenumber_cleaned[3] == 1)
     throw new Error("Exchange code cannot start with one");
-  return phone_number_cleaned; 
+  return phonenumber_cleaned; 
 };
