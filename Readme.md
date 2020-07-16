@@ -48,3 +48,6 @@ My solutions for the tracks in [exercism.io](https://exercism.io)
 - [x] largest-series-product
 - [x] acronym 
 - [x] anagram
+- [x] bob 
+- [x] phone-number
+- [x] transpose
