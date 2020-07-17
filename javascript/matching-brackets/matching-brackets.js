@@ -1,18 +1,13 @@
-const open_brackets = ['[','{','('];
-const closed_brackets = [']','}',')'];
+const brackets = {'[':']', '{':'}', '(':')'};
 export const isPaired = (combination) => {
-  let str = [],len = combination.length;
-  let last = -1;
-  for(let i=0; i<len; i++)
+  let stack = [];
+  let extract_brackets = combination.replace(/[^[\]{}()]/g,'');
+  for(let bracket of extract_brackets) 
   {
-    if(open_brackets.includes(combination[i]))
-      str.push(combination[i]);
-    else if(closed_brackets.includes(combination[i]))
-    {
-      last = str.pop();
-      if(last == undefined || closed_brackets.indexOf(combination[i]) != open_brackets.indexOf(last))
-        return false;
-    }
+    if(brackets.hasOwnProperty(bracket))
+      stack.push(bracket);
+    else if(stack.length == 0 || brackets[stack.pop()] != bracket )
+      return false;
   }
-  return str.length == 0;
+  return stack.length == 0;
 };
