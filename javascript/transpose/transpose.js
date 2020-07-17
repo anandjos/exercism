@@ -1,22 +1,11 @@
 export const transpose = (input) => {
-  let i,len=0;
-  let transpose = [];
-  let str = '';
+  let len=0;
   input.forEach(function(row){
     len = Math.max(len,row.length);
   });
-  for(i = 0; i<len; i++)
-  {
-    str = '';
-    input.forEach(function(row){
-      if(row[i] != undefined)
-        str = str + row[i];
-      else str = str + ' ';
-    });
-    transpose.push(str);
-  }
-  let last = transpose.pop();
-  if(last != undefined)
-    transpose.push(last.trimEnd());
+  let transpose = Array.from({length:len}).map((_,i) => input.reduce(function(acc = '',row){
+    return (row[i] || ' ') + acc ;},'').split('').reverse().join(''));
+  if(transpose[len-1] != undefined)
+    transpose[len-1] = transpose[len-1].trimEnd();
   return transpose;
 };
