@@ -19,7 +19,7 @@ export class Character {
     let arr=[],sum=0;
     for(let i=0; i<4; i++)
     {
-      arr[i]=Math.floor(Math.random()*5 + 1);
+      arr[i]=Math.floor(Math.random()*6 + 1);
       sum+=arr[i];
     }
     return sum-Math.min(...arr);
