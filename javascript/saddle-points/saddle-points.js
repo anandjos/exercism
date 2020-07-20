@@ -1,25 +1,12 @@
-const saddle_point = {
-  row : 0,
-  column : 0
-};
-export const saddlePoints = (array) => {
+export const saddlePoints = (matrix) => {
   let saddle_points = [];
-  for(let r = 0; r<array.length; r++)
+  for(let r = 0; r < matrix.length; r++)
   {
-    let row = array[r];
-    for(let i = 0; i<row.length; i++)
-    {
-      if(row[i] == Math.max(...row))
-      {
-        if(row[i] == array.reduce(function(acc = 99,ro){ return Math.min(acc,ro[i]);},99))
-        {
-          let point = Object.create(saddle_point);
-          point.row = r+1;
-          point.column = i+1;
-          saddle_points.push(point);
-        }
-      }
-    }
+    let ROW = matrix[r];
+    for(let c = 0; c < ROW.length; c++)
+      if(ROW[c] == Math.max(...ROW))
+        if(ROW[c] == matrix.reduce( function(acc,row){ return Math.min(acc,row[c]); },Number.MAX_SAFE_INTEGER ))
+          saddle_points.push({column:c+1, row:r+1});
   }
   return saddle_points;
 };
