@@ -55,3 +55,5 @@ My solutions for the tracks in [exercism.io](https://exercism.io)
 - [x] beer-song
 - [x] saddle-points 
 - [x] pascals-triangle
+- [x] resistor-color-trio
+- [x] isbn-verifier
