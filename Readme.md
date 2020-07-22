@@ -53,3 +53,5 @@ My solutions for the tracks in [exercism.io](https://exercism.io)
 - [x] transpose
 - [x] matching-brackets 
 - [x] beer-song
+- [x] saddle-points 
+- [x] pascals-triangle
