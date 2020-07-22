@@ -10,8 +10,12 @@ export class ResistorColorTrio {
 
   get label() {
     let res_val = (this.color1_value*10 + this.color2_value)*Math.pow(10,this.color3_value);
+    let unit = 'ohms';
     if(res_val/1000 > 1)
-      return `Resistor value: ${res_val/1000} kiloohms`;
-    return `Resistor value: ${res_val} ohms`;
+    {
+      unit = 'kiloohms';
+      res_val = res_val/1000;
+    }
+    return `Resistor value: ${res_val} ${unit}`;
   }
 }
