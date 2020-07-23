@@ -57,3 +57,5 @@ My solutions for the tracks in [exercism.io](https://exercism.io)
 - [x] pascals-triangle
 - [x] resistor-color-trio
 - [x] isbn-verifier
+- [x] twelve-days 
+- [x] say
