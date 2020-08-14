@@ -59,3 +59,7 @@ My solutions for the tracks in [exercism.io](https://exercism.io)
 - [x] isbn-verifier
 - [x] twelve-days 
 - [x] say
+- [x] yacht
+- [x] spiral-matrix
+- [x] proverb
+- [x] rational-numbers
