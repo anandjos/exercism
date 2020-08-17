@@ -63,3 +63,4 @@ My solutions for the tracks in [exercism.io](https://exercism.io)
 - [x] spiral-matrix
 - [x] proverb
 - [x] rational-numbers
+- [x] linked-list 
